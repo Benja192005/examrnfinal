@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL</title>
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+    <!-- ICONOS BOXICONS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <main class="contenedor_maestro">
+        <header class="portada">
+            <h1>NOMADE DIGITAL</h1>
+            <p>Diseñador Web</p>
+
+
+            <div class="boton">
+            <a href="#cotizar">Cotizar Web</a>
+            </div>
+
+                <div class="flecha">
+                <i class="bx bx-chevron-down"></i>
+                </div>
+
+
+        </header>
+
+        <section class="rrss">
+            <span>conoce mis aventuras</span>
+            <ul>
+                <li>
+                    <a href="https://wa.me/56968241795"><i class="bx bxl-whatsapp"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/s4rqstic_3rr0r/"><i class="bx bxl-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/Benja192005"><i class='bx bxl-github'></i></a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="contacto" id="cotizar">
+            <h1>cotizar web</h1>
+            <p>Recuerda que mientras más específico seas en tu explicación, el presupuesto tendrá un costo más acotado a tus necesidades y te lo podré enviar más rápido.</p>
+            <form class="formulario" action="enviar.php" method="POST">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" name="nombre" placeholder="Tu nombre">
+                </div>
+                <div class="whatsapp">
+                    <label for="telefono">WhatsApp</label>
+                    <input type="tel" name="telefono" placeholder="Tu WhatsApp con código de área" required>
+                </div>
+                <div class="email">
+                    <label for="Email">Email</label>
+                    <input type="mail" name="email" placeholder="Tu correo electrónico" required>
+                </div>
+                <div class="datos web">
+                    <label for="selecciona">Selecciona el tipo de web</label>
+                    <select name="tipoweb" id="selecciona">
+                        <option value="onepage" selected>One Page</option>
+                        <option value="corporativa">Corporativa</option>
+                        <option value="ecommerce">eCommerce</option>
+                        <option value="elearning">eLearning</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="mensaje">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" placeholder="Háblame sobre las secciones de tu página"></textarea>
+                </div>
+                <div class="bocetos">
+                    <label for="boceto">Sube un boceto de tu idea</label>
+                    <input type="file" name="boceto">
+                </div>
+                <input type="submit" value="Cotizar">
+            </form>
+        </section>
+    </main>
+</body>
+</html>

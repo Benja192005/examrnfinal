@@ -1,0 +1,552 @@
+* {
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    
+        --tono-p:300;
+        --tono-s:230;
+        --primario-500:hsla(var(--tono-p) , 30%, 50%, 1);
+        --secundario-500:hsla(var(--tono-s), 100%, 50%, 1);
+
+        --secundario-900:hsla(var(--tono-s), 100%, 10%, 1);
+        --secundario-800:hsla(var(--tono-s), 100%, 20%, 1);
+        --secundario-700:hsla(var(--tono-s), 100%, 30%, 1);
+        --secundario-600:hsla(var(--tono-s), 100%, 40%, 1);
+        --secundario-400:hsla(var(--tono-s), 100%, 60%, 1);
+        --secundario-300:hsla(var(--tono-s), 100%, 70%, 1);
+        --secundario-200:hsla(var(--tono-s), 100%, 80%, 1);
+        --secundario-100:hsla(var(--tono-s), 100%, 90%, 1);
+
+    
+}
+
+@media screen and  (min-width: 1080px) { 
+    
+
+.contenedor_maestro{
+background-color: var(--secundario-200);
+width: 100%;
+height: 100vh;
+overflow-y: scroll;
+scroll-snap-type: y mandatory; /*activamos snap-scroll*/
+
+}
+
+
+header.portada{
+    scroll-snap-align: start;
+    background-image: linear-gradient(
+        hsla(170, 75%, 31%, 0.848),
+        hsla(205, 68%, 66%, 0.677)
+    ), url("../img/pexels-04iraq-1272398525-29615600.jpg");
+    background-size: cover;
+    background-position:90%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  
+    grid-template-rows:  repeat(5, 1fr); 
+    align-items: center;
+
+    animation: fondobanner 10s ease-in-out infinite;
+
+        h1{
+            
+            
+            font-size: 3rem;
+            color: white;
+            text-align: center;
+            grid-row: 1/6;
+            grid-column: 1/5;
+        }
+
+        p{
+           
+            font-size: 1.5rem;
+            color: white;
+            text-align: center;
+            grid-row: 2/6;
+            grid-column: 1/5;
+        }
+   
+     a {
+        grid-row: 4/6;
+        grid-column: 2/5;
+        font-size: 1rem;
+        
+
+        i{
+            font-size: 3.5rem;
+            animation: flotable-flecha 2s infinite;
+            grid-row: 4/6;
+            grid-column: 2/5;
+        }
+    }
+}
+
+@keyframes fondobanner {
+
+    0% {background-position: 20%;
+        background-size: 180%;
+    
+    }   
+
+    50% {background-position: 20%;
+        background-size: 110%;
+        }
+
+    100% {background-position: 20%;
+        background-size: 180%;
+        }
+    
+}
+
+@keyframes flotable-flecha{
+    0% {transform: translateY(-.5rem);}
+    50% {transform: translateY(1rem);}
+    100% {transform: translateY(-.5rem);}
+    
+}
+section.contacto{
+    scroll-snap-align: start;
+    background-color: green;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    scroll-snap-align: start;
+    background-image: linear-gradient(
+        hsla(159, 64%, 27%, 0.65),
+        hsla(204, 41%, 62%, 0.7)
+    ), url("/assets/img/pexels-dominik-perau-263453691-12699606.jpg");
+    background-size: cover;
+    background-position: 50%;
+    background-position: 0%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    animation: fondobanner 10s ease-in-out infinite;
+    
+}
+
+/*REDES SOCIALES*/
+
+
+}
+
+main{
+    background-color: aqua;
+    height: 100vh;
+    position: relative;
+}
+
+
+.rrss{
+    
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
+    width: max-content;
+    position: absolute;
+    top: calc(50% - (69px/2));
+    right: 20px;
+    transform: rotate(-90deg);
+    transform-origin: center right;
+
+    span {
+        line-height: 1rem;
+        display: inline-block;
+        margin-bottom: 3px;
+    }
+
+}
+
+
+ul{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    line-height: 1rem;
+    height: max-content;
+
+    li {
+        display: inline-block;
+        height: max-content;
+        line-height: 1rem;
+        a {
+            display: inline-block;
+            height: max-content;
+            line-height: .5rem;
+
+            i {
+                display: inline-block;
+                height: max-content;
+                font-size: 1rem;
+                line-height: .5rem;
+            }
+        }
+    }
+
+    
+
+}
+
+
+/*formulario*/
+
+    
+
+
+
+
+
+
+        
+body{
+    background-image:  url("assets/img/pexels-introspectivedsgn-18038881\ \(1\).jpg");
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.formulario {
+    position: relative;
+
+    padding: 1.5rem;
+    background-color: rgba(111, 110, 110, 0.6);
+    box-shadow: 0 0 10px rgba(128, 124, 124, 0.5);
+    backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+    
+}
+
+.formulario div {
+    display: flex;
+    flex-direction: column;
+    gap: .10rem;
+    margin-bottom: .3rem;
+
+}
+
+.formulario div input[type="text"],
+.formulario div input[type="tel"],
+.formulario div input[type="mail"],
+.formulario div select {
+    padding: 0.10rem;
+    border-radius: 1rem;
+    border: 1px solid var(--secundario-900);
+}
+
+.formulario div textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 0.5rem;
+    
+}
+
+.formulario div input:focus {
+    outline: 3px solid rgb(18, 136, 209);
+}
+
+.formulario input[type="submit"] {
+   
+    font-size: 1.1rem;
+    border-radius: 3rem;
+    border: 0;
+    background-color: var(--secundario-500);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    width: 35%;
+    height: 8%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10%);
+    bottom: -3%;
+    
+}
+
+h1{
+    font-size: 35px;
+    color: white;
+    text-align: left; 
+    margin-left: 10px; 
+   
+    
+    
+}
+
+p{
+    text-align: left;
+    font-size: 13px;
+    margin: 15px;
+    color: white;
+    text-align: left;
+    margin-left: 10px; 
+
+}
+    
+
+.formulario input[type="submit"]:hover {
+    background-color: var(--secundario-800);
+}
+
+
+@media screen and (max-width: 1440px){
+    .body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+
+    }
+
+
+    .contenedor_maestro{
+        background-color: var(--secundario-200);
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory; /*activamos snap-scroll*/
+        
+        }
+
+        header.portada{
+            scroll-snap-align: start;
+            background-image: linear-gradient(
+                hsla(158, 52%, 59%, 0.848),
+                hsla(205, 68%, 66%, 0.677)
+            ), url("../img/pexels-04iraq-1272398525-29615600.jpg");
+            background-size: cover;
+            background-position:100%;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);  
+            grid-template-rows:  repeat(5, 1fr); 
+           
+            align-items: center;
+        
+            animation: fondobanner 10s ease-in-out infinite;
+        
+                h1{
+                    
+                    
+                    font-size: 2rem;
+                    color: var(--secundario-900);
+                    text-align: left;
+                    grid-row: 1/6;
+                    grid-column: 1/5;
+                    margin-left: 10px;
+                    padding-bottom: 0px;
+                    display: block;
+                }
+        
+                p{
+                   
+                    font-size: 1rem;
+                    color: var(--secundario-900);
+                    text-align: left;
+                    grid-row: 2/6;
+                    grid-column: 1/5;
+                    margin-left: 10px;
+
+                }
+           
+                .boton{
+                    
+                    
+                       grid-row: 3/6;
+                       grid-column: 4/5 ;
+                       font-size: 0.8rem;
+                       margin-top: 60px;
+                       text-decoration: none;
+                       padding: 9px 3px;
+                       border-radius: 5px;
+                       animation: flotable-flecha 2s infinite;
+
+
+                       
+                       
+                    
+                }
+
+
+                .boton a{
+                
+                    margin: 20px 0;
+                    animation: flotable-flecha 2s infinite;
+                    grid-row:5/6;
+                    grid-column: 3/5;
+                    padding: 6px 1px;
+                    font-size: 15px;
+
+
+                    
+                    
+                 
+             }
+
+                .flecha{
+
+                    
+                        font-size:15px;
+                        animation: flotable-flecha 2s infinite;
+                        grid-row:4/6;
+                        grid-column: 4/5;
+                        padding: 6px 30px;
+                        margin-left: 20px;
+                    
+                }
+            }
+        }
+        
+        @keyframes fondobanner {
+        
+            0% {background-position: 20%;
+                background-size: 180%;
+            
+            }   
+        
+            50% {background-position: 20%;
+                background-size: 110%;
+                }
+        
+            100% {background-position: 20%;
+                background-size: 180%;
+                }
+            
+        }
+        
+        @keyframes flotable-flecha{
+            0% {transform: translateY(-.5rem);}
+            50% {transform: translateY(1rem);}
+            100% {transform: translateY(-.5rem);}
+            
+        }
+        section.contacto{
+            scroll-snap-align: start;
+            background-color: green;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+        
+            scroll-snap-align: start;
+            background-image: linear-gradient(
+                hsla(159, 40%, 39%, 0.65),
+                hsla(204, 41%, 62%, 0.7)
+            ), url("/assets/img/pexels-dominik-perau-263453691-12699606.jpg");
+            background-size: cover;
+            background-position: 50%;
+            background-position: 0%;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100vh;
+            animation: fondobanner 10s ease-in-out infinite;
+            
+        
+        
+        
+        }
+        
+        /*REDES SOCIALES*/
+        
+        
+        
+        .rrss{
+            
+           
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            align-items: center;
+            width: max-content;
+            position: absolute;
+            top: calc(50% - (69px/2));
+            right: 9px;
+            transform: rotate(-90deg);
+            transform-origin: center right;
+        
+            span {
+                position: relative;
+                line-height: 1rem;
+                display: inline-block;
+                margin-bottom: 3px;
+                color: white;
+            }
+        
+        }
+        
+        
+        ul{
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            line-height: 1rem;
+            height: max-content;
+        
+            li {
+                display: inline-block;
+                height: max-content;
+                line-height: 1rem;
+                a {
+                    display: inline-block;
+                    height: max-content;
+                    line-height: .5rem;
+        
+                    i {
+                        color: white;
+                        display: inline-block;
+                        height: max-content;
+                        font-size: 1rem;
+                        line-height: .5rem;
+                    }
+                }
+            }
+        
+            
+        
+        }
+        
+        
+        
+            
+        
+     
+        
+
+
